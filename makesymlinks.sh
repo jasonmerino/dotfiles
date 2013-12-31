@@ -13,7 +13,7 @@ dir=~/code/dotfiles/src
 olddir=~/code/dotfiles/dotfiles_old
 
 # list of files/folders to symlink in src dir
-files=".gitconfig .gitignore .vimrc"
+files=".aliases .bash_prompt .functions .gitconfig .gitignore .viminfo .vimrc env.zsh"
 
 ##########
 
