@@ -32,6 +32,7 @@
 	pl = pull
 	plm = pull origin master
 	ps = push
+	br = branch
 	ci = commit
 	co = checkout
 	com = checkout master
