@@ -20,7 +20,7 @@ let mapleader=","
 set binary
 set noeol
 " Centralize backups and undo history
-set backupdir=~/.vim/backups
+set backupdir=.
 set directory=.,$TEMP
 if exists("&undodir")
 	set undodir=~/.vim/undo
