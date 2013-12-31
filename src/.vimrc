@@ -19,9 +19,9 @@ let mapleader=","
 " Don’t add empty newlines at the end of files
 set binary
 set noeol
-" Centralize backups, swapfiles and undo history
+" Centralize backups and undo history
 set backupdir=~/.vim/backups
-set directory=~/.vim/swaps
+set directory=.,$TEMP
 if exists("&undodir")
 	set undodir=~/.vim/undo
 endif
