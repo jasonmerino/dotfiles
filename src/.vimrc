@@ -3,6 +3,7 @@ set nocompatible
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
 set clipboard=unnamed
 " Enhance command-line completion
+set wildmode=longest,list,full
 set wildmenu
 " Allow cursor keys in insert mode
 set esckeys
@@ -23,7 +24,7 @@ set noeol
 set backupdir=.
 set directory=.,$TEMP
 if exists("&undodir")
-	set undodir=~/.vim/undo
+	set undodir=.
 endif
 
 " Respect modeline in files
