@@ -28,3 +28,10 @@ for file in $files; do
   mv ~/$file $olddir
   ln -s $dir/$file ~/$file
 done
+
+if [ -d "$HOME/.vim" ]; then
+  mv ~/.vim $olddir
+  ln -s src/.vim/ ~/.vim
+else
+  ln -s src/.vim/ ~/.vim
+fi
