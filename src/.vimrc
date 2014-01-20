@@ -21,10 +21,10 @@ let mapleader=","
 set binary
 set noeol
 " Centralize backups and undo history
-set backupdir=.
-set directory=.,$TEMP
+set backupdir=~/.vim/backups
+set directory=~/.vim/swaps
 if exists("&undodir")
-	set undodir=.
+	set undodir=~/.vim/undo
 endif
 
 " Respect modeline in files
@@ -68,6 +68,8 @@ set showmode
 set title
 " Show the (partial) command as it’s being typed
 set showcmd
+" Add ctrlp.vim plugin
+set runtimepath^=~/.vim/bundle/ctrlp.vim
 " Use relative line numbers
 if exists("&relativenumber")
 	set relativenumber
