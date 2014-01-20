@@ -26,7 +26,8 @@ set directory=~/.vim/swaps
 if exists("&undodir")
 	set undodir=~/.vim/undo
 endif
-
+set autoindent
+filetype plugin indent on
 " Respect modeline in files
 set modeline
 set modelines=4
