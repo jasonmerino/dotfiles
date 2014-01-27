@@ -75,6 +75,7 @@
 [merge]
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
+	tool = vimdiff
 
 # URL shorthands
 [url "git@github.com:"]
@@ -97,3 +98,5 @@
 	email = jasonmerino@gmail.com
 [credential]
 	helper = osxkeychain
+[diff]
+	tool = vimdiff

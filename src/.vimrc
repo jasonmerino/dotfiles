@@ -34,6 +34,8 @@ set modelines=4
 " Enable per-directory .vimrc files and disable unsafe commands in them
 set exrc
 set secure
+" Set a shortcut key to toggle pasting
+set pastetoggle=<F2>
 " Enable line numbers
 set number
 " Enable syntax highlighting
@@ -42,6 +44,7 @@ syntax on
 set cursorline
 " Make tabs as wide as two spaces
 set tabstop=2
+set shiftwidth=2
 " Show “invisible” characters
 set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 set list
@@ -79,6 +82,8 @@ endif
 " Start scrolling three lines before the horizontal window border
 set scrolloff=3
 
+colorscheme elflord
+
 " Strip trailing whitespace (,ss)
 function! StripWhitespace()
 	let save_cursor = getpos(".")
@@ -97,4 +102,7 @@ if has("autocmd")
 	filetype on
 	" Treat .json files as .js
 	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
+	autocmd BufWritePre * :%s/\s\+$//e
+	autocmd VimEnter * tab all
+	autocmd BufAdd * exe 'tablast | tabe "' . expand( "<afile") .'"'
 endif

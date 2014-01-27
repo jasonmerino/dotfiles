@@ -31,7 +31,7 @@ done
 
 if [ -d "$HOME/.vim" ]; then
   mv ~/.vim $olddir
-  cp -a .vim ~/.vim
-else
-  cp -a .vim ~/.vim
 fi
+
+cd ~
+ln -s $dir/.vim .
