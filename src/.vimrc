@@ -28,6 +28,9 @@ if exists("&undodir")
 endif
 set autoindent
 filetype plugin indent on
+" Set basic autocomplete to on
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
 " Respect modeline in files
 set modeline
 set modelines=4
@@ -103,6 +106,5 @@ if has("autocmd")
 	" Treat .json files as .js
 	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 	autocmd BufWritePre * :%s/\s\+$//e
-	autocmd VimEnter * tab all
-	autocmd BufAdd * exe 'tablast | tabe "' . expand( "<afile") .'"'
+	au BufReadPost *.dust set syntax=html
 endif
