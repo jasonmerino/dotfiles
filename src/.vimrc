@@ -46,8 +46,8 @@ Bundle 'gmarik/vundle'
 " scripts on GitHub repos
 
 Bundle 'tpope/vim-fugitive'
-Bundle 'terryma/vim-multiple-cursors'
 Bundle 'mattn/emmet-vim'
+Bundle 'kien/ctrlp.vim'
 
 filetype plugin indent on     " required
 

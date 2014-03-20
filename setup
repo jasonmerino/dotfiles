@@ -35,3 +35,6 @@ fi
 
 cd ~
 ln -s $dir/.vim .
+
+# install bundles via vundle
+vim +BundleInstall +qall
