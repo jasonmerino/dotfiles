@@ -1,5 +1,6 @@
 " Make Vim more useful
 set nocompatible
+
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
 set clipboard=unnamed
 " Enhance command-line completion
@@ -27,7 +28,29 @@ if exists("&undodir")
 	set undodir=~/.vim/undo
 endif
 set autoindent
-filetype plugin indent on
+
+filetype off " required for vundle
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+" alternatively, pass a path where Vundle should install bundles
+"let path = '~/some/path/here'
+"call vundle#rc(path)
+
+" let Vundle manage Vundle, required
+Bundle 'gmarik/vundle'
+
+" The following are examples of different formats supported.
+" Keep bundle commands between here and filetype plugin indent on.
+" scripts on GitHub repos
+
+Bundle 'tpope/vim-fugitive'
+Bundle 'terryma/vim-multiple-cursors'
+Bundle 'mattn/emmet-vim'
+
+filetype plugin indent on     " required
+
 " Set basic autocomplete to on
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
@@ -39,8 +62,6 @@ set exrc
 set secure
 " Set a shortcut key to toggle pasting
 set pastetoggle=<F2>
-" Enable line numbers
-set number
 " Enable syntax highlighting
 syntax on
 " Highlight current line
@@ -82,10 +103,17 @@ if exists("&relativenumber")
 	set relativenumber
 	au BufReadPost * set relativenumber
 endif
+
+" Enable line numbers
+set number
+
 " Start scrolling three lines before the horizontal window border
 set scrolloff=3
 
-colorscheme elflord
+" Set colorscheme
+syntax enable
+set background=dark
+colorscheme solarized
 
 " Strip trailing whitespace (,ss)
 function! StripWhitespace()
