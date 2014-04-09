@@ -1,11 +1,16 @@
 " Make Vim more useful
 set nocompatible
 
+" Reload files if they change outside of Vim (i.e. switching branches in
+" version control
+set autoread
+
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
 set clipboard=unnamed
 " Enhance command-line completion
 set wildmode=longest,list,full
 set wildmenu
+set wildignore+=*/node_modules/*
 " Allow cursor keys in insert mode
 set esckeys
 " Allow backspace in insert mode
@@ -47,7 +52,9 @@ Bundle 'gmarik/vundle'
 
 Bundle 'tpope/vim-fugitive'
 Bundle 'mattn/emmet-vim'
-Bundle 'kien/ctrlp'
+Bundle 'kien/ctrlp.vim'
+Bundle 'airblade/vim-gitgutter'
+Bundle 'scrooloose/nerdtree'
 
 filetype plugin indent on     " required
 
@@ -96,8 +103,7 @@ set showmode
 set title
 " Show the (partial) command as it’s being typed
 set showcmd
-" Add ctrlp.vim plugin
-set runtimepath^=~/.vim/bundle/ctrlp.vim
+
 " Use relative line numbers
 if exists("&relativenumber")
 	set relativenumber
