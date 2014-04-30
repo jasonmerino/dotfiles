@@ -21,6 +21,9 @@ set ttyfast
 set gdefault
 " Use UTF-8 without BOM
 set encoding=utf-8 nobomb
+" Setup NERDTree quick toggle
+map <C-n> :NERDTreeToggle<CR>
+
 " Change mapleader
 let mapleader=","
 " Don’t add empty newlines at the end of files
@@ -56,11 +59,25 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'scrooloose/nerdtree'
 
+" Start snipmate bundles
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'tomtom/tlib_vim'
+Bundle 'honza/vim-snippets'
+Bundle 'garbas/vim-snipmate'
+" End snipmate bundles
+
 filetype plugin indent on     " required
 
 " Set basic autocomplete to on
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
+
+" Set styles for vim gitgutter
+let g:gitgutter_sign_column_always = 1
+let g:gitgutter_sign_added = '|'
+let g:gitgutter_sign_modified = '|'
+let g:gitgutter_sign_removed = '|'
+let g:gitgutter_sign_modified_removed = '|'
 " Respect modeline in files
 set modeline
 set modelines=4
@@ -119,7 +136,7 @@ set scrolloff=3
 " Set colorscheme
 syntax enable
 set background=dark
-colorscheme solarized
+colorscheme lucius
 
 " Strip trailing whitespace (,ss)
 function! StripWhitespace()
