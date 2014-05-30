@@ -78,6 +78,13 @@ let g:gitgutter_sign_added = '|'
 let g:gitgutter_sign_modified = '|'
 let g:gitgutter_sign_removed = '|'
 let g:gitgutter_sign_modified_removed = '|'
+
+" Settings for Ctrl-P
+let g:ctrlp_prompt_mappings = {
+    \ 'AcceptSelection("e")': ['<c-t>'],
+    \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
+    \ }
+
 " Respect modeline in files
 set modeline
 set modelines=4
