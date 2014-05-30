@@ -36,6 +36,7 @@
 	ci = commit
 	co = checkout
 	com = checkout master
+	# Clean up references to merged local and remote branches
 	cl = "!f() { git branch --merged master | grep -v 'master$' | xargs git branch -d; git remote prune origin; }; f"
 [apply]
 	# Detect whitespace errors when applying a patch
