@@ -31,12 +31,15 @@
 	df = diff
 	pl = pull
 	plm = pull origin master
+	plum = pull upstream master
 	ps = push
 	br = branch
 	ci = commit
 	co = checkout
 	com = checkout master
 	sup = submodule update --recursive
+	# Pull everything (set upstream, pull submodules, update to current master) (UNDER CONSTRUCTION)
+	# ple = "!f() { git branch --list | grep '\* '; }; f"
 	# Clean up references to merged local and remote branches
 	cl = "!f() { git branch --merged master | grep -v 'master$' | xargs git branch -d; git remote prune origin; }; f"
 [apply]
@@ -77,7 +80,7 @@
 [merge]
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
-	tool = vimdiff
+	tool = bc3
 
 # URL shorthands
 [url "git@github.com:"]
@@ -101,7 +104,9 @@
 [credential]
 	helper = osxkeychain
 [diff]
-	tool = vimdiff
+	tool = bc3
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
+[difftool]
+	prompt = false

@@ -58,6 +58,8 @@ Bundle 'mattn/emmet-vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'scrooloose/nerdtree'
+Bundle 'moll/vim-node'
+Bundle 'vim-scripts/EasyGrep'
 
 " Start snipmate bundles
 Bundle 'MarcWeber/vim-addon-mw-utils'
