@@ -1,6 +1,11 @@
 " Make Vim more useful
 set nocompatible
 
+" Use 12pt Monaco
+set guifont=Monaco:h11
+" Better line-height
+set linespace=1
+
 " Reload files if they change outside of Vim (i.e. switching branches in
 " version control
 set autoread
@@ -23,6 +28,10 @@ set gdefault
 set encoding=utf-8 nobomb
 " Setup NERDTree quick toggle
 map <C-n> :NERDTreeToggle<CR>
+
+" Move visual block (http://vimrcfu.com/snippet/77)
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
 
 " Change mapleader
 let mapleader=","

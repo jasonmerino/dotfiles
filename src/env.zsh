@@ -1,1 +1,0 @@
-HOMEBREW_PREFIX=/usr/local
