@@ -11,10 +11,21 @@ export M2=/Applications/apache-maven-3.2.5/bin
 
 # Add Aliases
 alias ll="ls -lhA"
-alias npm-reup="npm prune && npm cache clean && npm install"
+
+function clean() {
+  if [ -a $PWD/package.json ]
+    then
+      echo "Running npm prune..."
+      npm prune
+      echo "Running npm cache clean..."
+      npm cache clean
+      echo "Running npm install..."
+      npm install
+  fi
+}
 
 # Add git branch name for current directory
 parse_git_branch() {
-     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 export PS1="\u \[\033[32m\]@ \[\033[315m\]\h \[\033[36m\]\w\[\033[35m\]\$(parse_git_branch)\[\033[00m\] \n$ "
