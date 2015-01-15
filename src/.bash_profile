@@ -22,6 +22,15 @@ function clean() {
       echo "Running npm install..."
       npm install
   fi
+  if [ -a $PWD/bower.json ]
+    then
+      echo "Running bower prune..."
+      bower prune
+      echo "Running bower cache clean..."
+      bower cache clean
+      echo "Running bower install..."
+      bower install
+  fi
 }
 
 # Add git branch name for current directory
