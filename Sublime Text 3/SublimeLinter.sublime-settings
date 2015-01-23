@@ -1,11 +1,18 @@
 {
-    "default": {
+    "user": {
         "debug": false,
-        "delay": 0.25,
+        "delay": 0,
         "error_color": "D02000",
         "gutter_theme": "Packages/SublimeLinter/gutter-themes/Default/Default.gutter-theme",
         "gutter_theme_excludes": [],
-        "lint_mode": "background",
+        "lint_mode": "load/save",
+        "linters": {
+            "jshint": {
+                "@disable": false,
+                "args": [],
+                "excludes": []
+            }
+        },
         "mark_style": "outline",
         "no_column_highlights_line": false,
         "passive_warnings": false,
@@ -24,11 +31,11 @@
         "show_errors_on_save": false,
         "show_marks_in_minimap": true,
         "syntax_map": {
-            "python django": "python",
-            "html 5": "html",
             "html (django)": "html",
             "html (rails)": "html",
-            "php": "html"
+            "html 5": "html",
+            "php": "html",
+            "python django": "python"
         },
         "warning_color": "DDB700",
         "wrap_find": true
