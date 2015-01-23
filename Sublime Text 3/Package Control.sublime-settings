@@ -10,6 +10,7 @@
 	"installed_packages":
 	[
 		"DocBlockr",
+		"DustBuster",
 		"GitGutter",
 		"Package Control",
 		"SublimeLinter",
