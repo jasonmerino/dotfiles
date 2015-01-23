@@ -1,10 +1,10 @@
 {
-	"color_scheme": "Packages/User/SublimeLinter/Monokai (SL).tmTheme",
+	"color_scheme": "Packages/User/SublimeLinter/Pastels on Dark (SL).tmTheme",
+	"draw_white_space": "all",
 	"find_selected_text": true,
 	"ignored_packages":
 	[
 		"Vintage"
 	],
-	"trim_trailing_white_space_on_save": true,
-	"draw_white_space": "all"
+	"trim_trailing_white_space_on_save": true
 }
