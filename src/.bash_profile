@@ -12,6 +12,7 @@ export M2=/Applications/apache-maven-3.2.5/bin
 
 # Add Aliases
 alias ll="ls -lhA"
+alias sublime="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 
 function clean() {
   if [ -a $PWD/package.json ]
