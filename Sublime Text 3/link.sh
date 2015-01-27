@@ -1,7 +1,11 @@
 #!/bin/bash
 
 echo "Linking snippets..."
-ln -s "$PWD/console-log.sublime-snippet" "$HOME/Library/Application Support/Sublime Text 3/Packages/User/console-log.sublime-snippet"
+ln -s "$PWD/snippets/console-log.sublime-snippet" "$HOME/Library/Application Support/Sublime Text 3/Packages/User/console-log.sublime-snippet"
+ln -s "$PWD/snippets/it.sublime-snippet" "$HOME/Library/Application Support/Sublime Text 3/Packages/User/it.sublime-snippet"
+ln -s "$PWD/snippets/desc.sublime-snippet" "$HOME/Library/Application Support/Sublime Text 3/Packages/User/desc.sublime-snippet"
+
+
 ln -s "$PWD/Preferences.sublime-settings" "$HOME/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
 
 echo "Linking packages..."

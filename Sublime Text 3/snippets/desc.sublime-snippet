@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+describe('${1}', function() {
+${2:	'use strict';}
+
+	${3}
+
+});
+]]></content>
+	<tabTrigger>desc</tabTrigger>
+	<scope>source.js</scope>
+	<description>Mocha describe function</description>
+</snippet>
