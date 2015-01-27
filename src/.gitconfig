@@ -1,0 +1,24 @@
+[alias]
+	cm = commit
+	co = checkout
+	df = diff
+	mg = merge
+	pl = pull
+	ps = push
+	st = status
+[user]
+	name = Jason Merino
+	email = jasonmerino@gmail.com
+[push]
+	default = current
+[core]
+	editor = vim
+	excludesfile = /Users/j_merino/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[credential]
+	helper = cache
