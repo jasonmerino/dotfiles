@@ -13,6 +13,10 @@ export M2=/Applications/apache-maven-3.2.5/bin
 # Generic Aliases
 alias ll="ls -lhA"
 alias sublime="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
 
 # Work Aliases
 function up() {
