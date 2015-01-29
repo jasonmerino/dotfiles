@@ -2,9 +2,15 @@
 	"color_scheme": "Packages/User/SublimeLinter/Pastels on Dark (SL).tmTheme",
 	"draw_white_space": "all",
 	"find_selected_text": true,
-	"ignored_packages":
-	[
+	"ignored_packages": [
 		"Vintage"
+	],
+	"folder_exclude_patterns": [
+		".sass-cache",
+		".git",
+		".idea",
+		".vagrant",
+		"node_modules"
 	],
 	"trim_trailing_white_space_on_save": true
 }

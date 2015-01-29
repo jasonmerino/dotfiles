@@ -10,10 +10,28 @@ export CATALINA_HOME=/Applications/apache-tomcat-7.0.57/bin
 export M2_HOME=/Applications/apache-maven-3.2.5
 export M2=/Applications/apache-maven-3.2.5/bin
 
-# Add Aliases
+# Generic Aliases
 alias ll="ls -lhA"
 alias sublime="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 
+# Work Aliases
+function up() {
+  if [ "$1" == "cloud" ]
+    then
+      clean
+      echo "Running cd src/"
+      cd src/
+      clean
+      echo "Running cd .."
+      cd ..
+      echo "Running grunt"
+      grunt
+      echo "Running grunt server"
+      grunt server
+  fi
+}
+
+# Generic Functions
 function clean() {
   if [ -a $PWD/package.json ]
     then
