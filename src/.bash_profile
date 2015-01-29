@@ -22,16 +22,7 @@ alias .....="cd ../../../.."
 function up() {
   if [ "$1" == "cloud" ]
     then
-      clean
-      echo "Running cd src/"
-      cd src/
-      clean
-      echo "Running cd .."
-      cd ..
-      echo "Running grunt"
-      grunt
-      echo "Running grunt server"
-      grunt server
+      batch_exec "clean" "cd src/" "clean" "cd .." "grunt" "grunt server"
   fi
 }
 
@@ -39,22 +30,21 @@ function up() {
 function clean() {
   if [ -a $PWD/package.json ]
     then
-      echo "Running npm prune..."
-      npm prune
-      echo "Running npm cache clean..."
-      npm cache clean
-      echo "Running npm install..."
-      npm install
+      batch_exec "npm prune" "npm cache clean" "npm install"
   fi
   if [ -a $PWD/bower.json ]
     then
-      echo "Running bower prune..."
-      bower prune
-      echo "Running bower cache clean..."
-      bower cache clean
-      echo "Running bower install..."
-      bower install
+      batch_exec "bower prune" "bower cache clean" "bower install"
   fi
+}
+
+function batch_exec() {
+  for i in "${@}"
+  do
+    echo "Starting [$i]"
+    eval "$i"
+    echo "Finished [$i]"
+  done
 }
 
 # Add git branch name for current directory
