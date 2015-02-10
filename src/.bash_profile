@@ -3,6 +3,7 @@ export PATH=/Applications/apache-maven-3.2.5/bin:$PATH
 export PATH=/Applications/apache-tomcat-7.0.57/bin:$PATH
 export PATH=/usr/local/mysql/bin:$PATH
 export PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
+export PATH=/Applications/sonar-runner-2.4/bin:$PATH
 
 # New Environment Variables
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home
