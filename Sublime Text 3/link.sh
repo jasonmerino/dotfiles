@@ -2,6 +2,7 @@
 
 echo "Linking snippets..."
 ln -s "$PWD/snippet-console-log.sublime-snippet" "$HOME/Library/Application Support/Sublime Text 3/Packages/User/"
+ln -s "$PWD/snippet-context-dump.sublime-snippet" "$HOME/Library/Application Support/Sublime Text 3/Packages/User/"
 ln -s "$PWD/snippet-it.sublime-snippet" "$HOME/Library/Application Support/Sublime Text 3/Packages/User/"
 ln -s "$PWD/snippet-desc.sublime-snippet" "$HOME/Library/Application Support/Sublime Text 3/Packages/User/"
 
