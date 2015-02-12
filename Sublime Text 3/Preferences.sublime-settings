@@ -1,5 +1,5 @@
 {
-	"color_scheme": "Packages/User/SublimeLinter/Pastels on Dark (SL).tmTheme",
+	"color_scheme": "Packages/User/SublimeLinter/predawn (SL).tmTheme",
 	"draw_white_space": "all",
 	"find_selected_text": true,
 	"folder_exclude_patterns":
@@ -14,5 +14,7 @@
 	[
 		"Vintage"
 	],
-	"trim_trailing_white_space_on_save": true
+	"theme": "predawn.sublime-theme",
+	"trim_trailing_white_space_on_save": true,
+	"tab_size": 2
 }
