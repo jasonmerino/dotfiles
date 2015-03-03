@@ -14,7 +14,7 @@
 	[
 		"Vintage"
 	],
+	"tab_size": 2,
 	"theme": "predawn.sublime-theme",
-	"trim_trailing_white_space_on_save": true,
-	"tab_size": 2
+	"trim_trailing_white_space_on_save": true
 }
