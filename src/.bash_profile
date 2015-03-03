@@ -12,7 +12,7 @@ export M2_HOME=/Applications/apache-maven-3.2.5
 export M2=/Applications/apache-maven-3.2.5/bin
 
 # Generic Aliases
-alias ll="ls -lhA"
+alias ll="ls -lhAG"
 alias sublime="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias ..="cd .."
 alias ...="cd ../.."
