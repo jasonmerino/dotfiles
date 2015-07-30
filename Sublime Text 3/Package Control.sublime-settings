@@ -4,14 +4,24 @@
 	],
 	"installed_packages":
 	[
+		"Babel",
 		"DocBlockr",
 		"DustBuster",
 		"Emmet",
 		"GitGutter",
+		"Handlebars",
+		"Inspired GitHub Color Scheme",
 		"Package Control",
+		"Phpcs",
 		"Predawn",
+		"ReactJS",
 		"Sass",
 		"SublimeLinter",
-		"SublimeLinter-jshint"
+		"SublimeLinter-contrib-eslint",
+		"SublimeLinter-jshint",
+		"Theme - Numix Light",
+		"Theme - Spacegray",
+		"Theme - Tech49",
+		"Zeus"
 	]
 }

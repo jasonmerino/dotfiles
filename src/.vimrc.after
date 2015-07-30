@@ -1,0 +1,10 @@
+" Ctrlp ignore patterns
+unlet g:ctrlp_custom_ignore
+let g:ctrlp_custom_ignore = '\v[\/](\.git|node_modules|bower_components)$'
+
+" highlight tabs and trailing spaces
+set listchars=tab:>-,trail:-
+set list
+
+" use tabs
+set noexpandtab
